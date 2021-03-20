@@ -1,0 +1,37 @@
+class Monster():
+    
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        print(f'{self.name}是一只大妖，已经修炼{self.age}年')
+        
+    def fly(self):
+        print(f'{self.name}是一只大妖，可以腾云驾雾')
+        
+    def eat(self):
+        print('是一只大妖，会吃人')
+        
+        
+   class Animal():
+     
+    def __init__(self,classification):
+        self.classification = classification
+        print(f'{self.classification}是一种动物')
+        
+    def run(self):
+        print('是一种善于奔跑的动物')
+        
+    def eat(self):
+        print('是食肉动物')
+        
+        
+    class Lion_Monster(Monster,Animal):
+    def __init__(self,name,age,level,classification):
+        super().__init__(name,age)
+        self.level = level
+
+lion_monster = Lion_Monster('狮子精',500,'站5渣','123')
+print(f'{lion_monster.name}修炼{lion_monster.age}年，战斗力是：{lion_monster.level}')
+lion_monster.fly()
+lion_monster.eat()
+lion_monster.run()
