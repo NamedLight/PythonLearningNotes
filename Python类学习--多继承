@@ -35,3 +35,47 @@ print(f'{lion_monster.name}修炼{lion_monster.age}年，战斗力是：{lion_mo
 lion_monster.fly()
 lion_monster.eat()
 lion_monster.run()
+
+
+
+class Animal(object):
+        
+    def run():
+        print('动物善于奔跑')
+        
+    def eat():
+        print('动物需要获得食物')
+        
+class Lion(Animal):
+        
+    def fly():
+        print('狮子并不会飞行')
+        
+    def eat():
+        print('狮子是肉食动物')
+        
+class Monster(object):
+    
+    def fight():
+        print('妖怪喜欢打架') 
+        
+    def eat():
+        print('大妖会吃人')   
+        
+        
+class West_Monster(Monster):
+    
+    def run():
+        print('取经路上的大妖可以飞，不用跑')
+    
+    def eat():
+        print('取经路上的大妖会吃三藏')
+        
+class Lion_Monster(Lion,West_Monster):
+    
+    def fly():
+        print('狮子精可以腾云驾雾')
+        
+Lion_Monster.run()
+Lion_Monster.eat()
+Lion_Monster.fight()
