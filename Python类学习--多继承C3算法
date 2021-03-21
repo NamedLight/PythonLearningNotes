@@ -1,1 +1,47 @@
-class 
+class A(object):
+    pass
+    
+class B(A):
+    pass
+    
+class C(A):
+    pass
+    
+class D(A):
+    pass
+    
+
+class C1(C,D):
+    pass
+
+class B1(B,C1):
+    pass
+        
+class D1(D):
+    pass
+
+    
+class B2(B1):
+    pass
+    
+class C2(C1):
+    pass
+    
+class D2(D1):
+    pass
+
+    
+class B3(B2):
+    pass
+    
+class C3(B2,C2):
+    pass
+    
+class D3(C2,D2):
+    pass
+    
+class N(B3,C3,D3):
+    pass
+
+for n in N.__mro__:
+    print(n)
