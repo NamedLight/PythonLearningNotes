@@ -1,0 +1,40 @@
+#其实这边用类不太合适，因为只有一个，不过瞎扯，无所谓了
+
+
+class SmartMonkey(object):    #不知道怎么描述，这是孙悟空，灵明石猴
+    
+    def __init__(self,name):
+        self.name = name
+        
+    def decorate(self):
+        print(f'{self.name}被套上了“紧箍咒”，会疼')
+        
+    def Weapon(self):
+        print(f'{self.name}的兵器是“金箍棒”')
+        
+    def skill(self):
+        print(f'{self.name}会火眼金睛和七十二变')
+        
+    def experience(self):
+        print(f'{self.name}曾经大闹天宫和地府')
+        
+    def mirror(self):
+        print(f'{self.name}是真的美猴王')
+
+
+class SixMonkey(SmartMonkey):      #这是六耳猕猴
+    
+    def __init__(self,name):
+        super().__init__(name)
+        self.__appearance = 'six ear'
+    
+    def __appearances(self):
+        print(f'{self.name} has {self.__appearance}')
+        
+        
+wukong = SmartMonkey('孙悟空')
+fake_wukong = SixMonkey('假悟空')
+
+
+wukong.Weapon(),fake_wukong.Weapon()
+
